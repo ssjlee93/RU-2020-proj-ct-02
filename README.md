@@ -14,10 +14,10 @@
 * [Sketch](#Sketch)
 
 ### Collaborators 
-Erica Cannedy - backend: Sequelize main;
-Kobe Matias - new technology development and frontend: HTML, CSS;
-Jenny Yoon - presentation and frontend: JavaScript main;
-Steve Lee - backend and debugging;
+* Erica Cannedy - backend: Sequelize main;
+* Kobe Matias - new technology development and frontend: HTML, CSS;
+* Jenny Yoon - presentation and frontend: JavaScript main;
+* Steve Lee - backend and debugging;
 
 ## Proposal 
 Original proposal of this projəct
