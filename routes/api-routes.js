@@ -8,6 +8,16 @@ module.exports = function(app) {
       res.json(dbPR);
     });
 
+    app.get("/pr/:name", async function(req, res) {
+      // 1. Add a join to include all of each Author's Posts
+      const dbPR = await db.PR.findOne({ 
+        where: {
+        routine_name: req.params.name
+      }
+    })
+      res.json(dbPR);
+    });
+
     app.post("/pr", async function(req, res) {
       // 1. Add a join to include all of each Author's Posts
       const dbPR = await db.PR.create(req.body)
@@ -16,14 +26,7 @@ module.exports = function(app) {
 
     app.put("/pr/:id", async function(req, res) {
       // 1. Add a join to include all of each Author's Posts
-      const {}
-      
-      const dbPR = await db.PR.update({ 
-        routine_name: routine_name, 
-        reps: req.body.reps,
-        exercise_one: req.body.exercise_one, 
-        exercise_one: req.body.exercise_one, 
-      }, {
+      const dbPR = await db.PR.update(req.body, {
         where: {
           id: req.params.id
         }
