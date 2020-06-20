@@ -9,8 +9,8 @@
 
 * [Collaborators](#Collaborators)
 * [Proposal](#Proposal)
-* [Title](#My_Personal_Record_Tracker)
-* [Technologies](#Potential_new_technologies)
+* [Title](#My-Personal-Record-Tracker)
+* [Technologies](#Potential-new-technologies)
 * [Sketch](#Sketch)
 
 ### Collaborators 
