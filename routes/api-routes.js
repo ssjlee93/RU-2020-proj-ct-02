@@ -12,7 +12,7 @@ module.exports = function(app) {
       // 1. Add a join to include all of each Author's Posts
       const dbPR = await db.PR.findOne({ 
         where: {
-        routine_name: req.params.name
+        routineName: req.params.name
       }
     })
       res.json(dbPR);

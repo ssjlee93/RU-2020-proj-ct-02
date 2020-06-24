@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     const Routines = sequelize.define("Routines", {
-      routine_name: {
+      routineName: {
         type: Datatypes.STRING,
         allowNull: false,
       },
