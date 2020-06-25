@@ -22,8 +22,10 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="/" class="brand-logo">My Workout Buddy</a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn" href="/">Home Page</a></li>
-        <li><a class="waves-effect waves-light btn" href="/userRoutines">View Routines</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#createModal">Create Routine</a></li>
+        <!--added href, modal trigger-->
+        <li><a href="#myRoutine" class="modal-trigger">View Routines</a></li>
+
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
@@ -179,10 +181,10 @@
   <div id="createModal" class="modal">
     <div class="modal-content">
         <div class="row">
-            <form class="col s12">
+            <form id="formroutine" class="col s12">
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="routineName" type="text" class="validate">
+                  <input id="routineName" name="routineName" type="text" class="validate">
                   <label for="routineName">Routine Name</label>
                 </div>
               </div>
@@ -225,14 +227,19 @@
                   <label for="repCount3">How many reps?</label>
                 </div>
               </div>
-
+              <!--added attribute modal close, modal-trigger(to open), added href=myRountine-->
               <div class="row right-align">
-                <a id="submitRoutine" class="waves-effect waves-light btn-large"><i class="material-icons left">create</i>Create Routine</a>
+                <a id="submitRoutine" class="waves-effect waves-light btn-large modal-close modal-trigger" href="#myRoutine" ><i class="material-icons left">create</i>Create Routine</a>
               </div>
             </form>
         </div>
     </div>
   </div>
+
+  // added new div
+  <div id="myRoutine" class="modal">
+  </div>
+  
 
   <!-- Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
