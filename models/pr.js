@@ -5,12 +5,16 @@ const PR = sequelize.define("PR", {
       type: DataType.STRING,
       allowNull: false
     },
-    reps: {
+    sets: {
       type: DataType.INT,
       allowNull: false
     },
     exerciseOne: {
       type: DataType.STRING,
+      allowNull: false
+    },
+    repOne: {
+      type: DataType.INTEGER,
       allowNull: false
     },
     exerciseTwo: {
