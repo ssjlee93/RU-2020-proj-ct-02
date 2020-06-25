@@ -20,15 +20,15 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="/" class="brand-logo">My Workout Buddy</a>
+      <a id="logo-container" href="#" class="brand-logo">My Workout Buddy</a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="waves-effect waves-light btn" href="/">Home Page</a></li>
-        <li><a class="waves-effect waves-light btn" href="/userRoutines">View Routines</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#createModal">Create Routine</a></li>
+        <li><a href="#">View Routines</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="/">Home Page</a></li>
-        <li><a href="/userRoutines">View Routines</a></li>
+        <li><a href="#createModal">Create Routine</a></li>
+        <li><a href="#">View Routines</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -40,113 +40,35 @@
 
         <h1 class="header center light-blue-text text-darken-1">My Workout Buddy</h1>
         <div class="row center">
-          <h3 class="header col s12 teal-text">User Routines</h3>
+          <h5 class="header col s12 light">Your Personal Record and Routine Tracker</h5>
         </div>
+        <div class="row center">
+          <a href="#createModal" class="btn-large waves-effect waves-light light-blue lighten-1 modal-trigger">Get Started</a>
+        </div>
+
+
       </div>
     </div>
-    <div class="parallax"><img src="images/bg7.jpg" alt="background img 1"></div>
+    <div class="parallax"><img src="images/bg2.jpg" alt="background img 1"></div>
   </div>
 
 
 <div class="container">
     <div class="section"><div class="container">
         <div class="row center">
-          <h3 class="header col s12 light-blue-text no-pad-bot no-margin-bot">User Created Routines</h3>
+          <h3 class="header col s12 light-blue-text no-pad-bot no-margin-bot">What can you do?</h3>
         </div>
     </div>
     <div id="userRoutines" class="row">
-      <!-- EXAMPLE USER ROUTINE(TO BE GENERATED IN JAVASCRIPT) -->
-        <div class="col s12 m4">
+        <div class="col s12 m6">
             <div class="card hoverable">
                 <div class="card-content">
-                  <h2 class="center light-blue-text"><i class="material-icons">fitness_center</i></h2>
-                  <h5 id="RoutineName" class="card-title center">Kobe's Routine</h5>
-                    <div class="row">
-                      <div id="Exercise" class="col s8">
-                        <p>Push-Ups</p>
-                      </div>
-                      <div id="Reps" class="col s4">
-                        <p>20</p>
-                      </div>
-                    </div> 
-                    <div class="row">
-                      <div id="Exercise" class="col s8">
-                        <p>Sit-Ups</p>
-                      </div>
-                      <div id="Reps" class="col s4">
-                        <p>30</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <button class="waves-effect waves-light btn">Edit</button>
-                    </div>
+                        <h2 class="center light-blue-text"><i class="material-icons">fitness_center</i></h2>
+                        <h5 class="card-title center">Create Your Own Routine</h5>
+                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit culpa debitis eius neque expedita non aliquam eum doloribus molestiae excepturi praesentium corrupti odio nisi ad, quod nobis corporis delectus voluptas.</p>
                 </div>
             </div>
         </div>
-      <!-- END EXAMPLE -->
-
-      <!-- EXAMPLE USER ROUTINE(TO BE GENERATED IN JAVASCRIPT) -->
-      <div class="col s12 m4">
-        <div class="card hoverable">
-            <div class="card-content">
-              <h2 class="center light-blue-text"><i class="material-icons">fitness_center</i></h2>
-              <h5 id="RoutineName" class="card-title center">Steve's Routine</h5>
-                <div class="row">
-                  <div id="Exercise" class="col s8">
-                    <p>League of Legends</p>
-                  </div>
-                  <div id="Reps" class="col s4">
-                    <p>20</p>
-                  </div>
-                </div> 
-                <div class="row">
-                  <div id="Exercise" class="col s8">
-                    <p>All Nighting</p>
-                  </div>
-                  <div id="Reps" class="col s4">
-                    <p>30</p>
-                  </div>
-                </div> 
-                <div class="row">
-                  <div id="Exercise" class="col s8">
-                    <p>League of Legends</p>
-                  </div>
-                  <div id="Reps" class="col s4">
-                    <p>20</p>
-                  </div>
-                </div> 
-                <div class="row">
-                  <div id="Exercise" class="col s8">
-                    <p>All Nighting</p>
-                  </div>
-                  <div id="Reps" class="col s4">
-                    <p>30</p>
-                  </div>
-                </div> 
-            </div>
-        </div>
-    </div>
-  <!-- END EXAMPLE -->
-
-  <!-- EXAMPLE USER ROUTINE(TO BE GENERATED IN JAVASCRIPT) -->
-  <div class="col s12 m4">
-    <div class="card hoverable">
-        <div class="card-content">
-          <h2 class="center light-blue-text"><i class="material-icons">fitness_center</i></h2>
-          <h5 id="RoutineName" class="card-title center">Jenny's Routine</h5>
-            <div class="row">
-              <div id="Exercise" class="col s8">
-                <p>Push-Ups</p>
-              </div>
-              <div id="Reps" class="col s4">
-                <p>20</p>
-              </div>
-            </div> 
-        </div>
-    </div>
-</div>
-<!-- END EXAMPLE -->
-
     </div>
     </div>
 </div>
@@ -170,10 +92,39 @@
     </div>
   </footer>
 
+  <!-- Modals -->
+  <div id="createModal" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="routineName" type="text" class="validate">
+                  <label for="routineName">Routine Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="sets" type="text" class="validate">
+                  <label for="sets">How many sets?</label>
+                </div>
+              </div>
+              <a id="addExercise" class="waves-effect waves-light btn-small"><i class="material-icons left">control_point</i>Add Exercise</a>
+              <div id="exerciseRow" class="row">
+                
+              </div>
+              <div class="row right-align">
+                <a id="submitRoutine" class="waves-effect waves-light btn-large"><i class="material-icons left">create</i>Create Routine</a>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
+
   <!-- Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  <script src="js/userRoutines.js"></script>
+  <script src="js/pr.js"></script>
   </body>
 </html>
