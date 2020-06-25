@@ -2,13 +2,13 @@ const db = require("../models");
 
 module.exports = function(app) {
     // Find all Authors and return them to the user with res.json
-    app.get("/pr", async function(req, res) {
+    app.get("/api/pr", async function(req, res) {
       // 1. Add a join to include all of each Author's Posts
       const dbPR = await db.PR.findAll({})
       res.json(dbPR);
     });
 
-    app.get("/pr/:name", async function(req, res) {
+    app.get("/api/pr/:name", async function(req, res) {
       // 1. Add a join to include all of each Author's Posts
       const dbPR = await db.PR.findOne({ 
         where: {
@@ -18,13 +18,13 @@ module.exports = function(app) {
       res.json(dbPR);
     });
 
-    app.post("/pr", async function(req, res) {
+    app.post("/api/pr", async function(req, res) {
       // 1. Add a join to include all of each Author's Posts
       const dbPR = await db.PR.create(req.body)
       res.json(dbPR);
     });
 
-    app.put("/pr/:id", async function(req, res) {
+    app.put("/api/pr/:id", async function(req, res) {
       // 1. Add a join to include all of each Author's Posts
       const dbPR = await db.PR.update(req.body, {
         where: {
@@ -34,7 +34,7 @@ module.exports = function(app) {
       res.json(dbPR);
     });
 
-    app.delete("/pr/:id", async function (req, res) {
+    app.delete("/api/pr/:id", async function (req, res) {
       const dbPR = await db.PR.destroy({
           where: {
             id: req.params.id
