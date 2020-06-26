@@ -5,7 +5,7 @@ module.exports = function(app) {
     app.get("/api/pr", async function(req, res) {
       // 1. Add a join to include all of each Author's Posts
       const dbPR = await db.PR.findAll({})
-      res.json(dbPR);
+      res.json({routines: dbPR});
     });
 
     app.get("/api/pr/:name", async function(req, res) {
