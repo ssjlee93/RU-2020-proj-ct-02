@@ -2,27 +2,27 @@ module.exports = function (sequelize, DataTypes) {
 
 const PR = sequelize.define("PR", {
     routineName: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
     sets: {
-      type: DataType.INT,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     exerciseOne: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
     repOne: {
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     exerciseTwo: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
     exerciseThree: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
   });

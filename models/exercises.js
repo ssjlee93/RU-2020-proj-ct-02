@@ -1,14 +1,14 @@
 module.exports = function (sequelize, DataTypes) {
   const Exercises = sequelize.define("Exercises", {
     exercise_name: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
     weight: {
-      type: DataType.INT
+      type: DataTypes.INTEGER
     },
     reps: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10
     },
@@ -22,6 +22,6 @@ module.exports = function (sequelize, DataTypes) {
       }
 
     });
-    return Exercises;
-}
+};
+return Exercises;
   };
