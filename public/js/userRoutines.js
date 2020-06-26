@@ -1,31 +1,47 @@
 $(document).ready(function(){
     $('.modal').modal();
-    function renderExercises() {
-        for (var i=0; i < len; i++) {
-            var exercise = $("<h2>" + results.exerc)
+
+    $.get( "/api/pr", function( data ) {
+        let routines = data.routines; 
+        let length = routines.length;
+        console.log(routines);
+       
+        for (var i = 0; i < length; i++) {
+            let newRow = $("<tr>"); 
+            let id = $("<td>").text(routines[i].id);
+            newRow.append(id);
+           let name = $("<td>").text(routines[i].routineName);
+            newRow.append(name);
+           let sets =  $("<td>").text(routines[i].sets);
+           newRow.append(sets);
+           let exercise1 =  $("<td>").text(routines[i].exerciseOne);
+           newRow.append(exercise1);
+           let rep1 =  $("<td>").text(routines[i].repOne);
+           newRow.append(rep1);
+           let exercise2 =  $("<td>").text(routines[i].exerciseTwo);
+           newRow.append(exercise2);
+           let rep2 =  $("<td>").text(routines[i].repTwo);
+           newRow.append(rep2);
+           let exercise3 =  $("<td>").text(routines[i].exerciseThree);
+           newRow.append(exercise3);
+           let rep3 =  $("<td>").text(routines[i].repThree);
+           newRow.append(rep3);
+           let btns = $("<td class='center-align'>").html("<button id='editBtn' class='waves-effect waves-light btn'>Edit</button><button id='deleteBtn' class='waves-effect waves-light btn'>Delete</button>");
+           newRow.append(btns);
+        //   name, sets, exercise1, rep1, exercise2, rep2, exercise3, rep3);
+            $("#prTable").append(newRow);
         }
-    }
 
-    function renderRoutines() {
-        for (var i=0; i < len; i++) {
-            var mainDiv = $("<div class='col s12 m6'>");
-            var cardDiv = $("<div class='card hoverable'>");
-            var cardContent = $("<div class='card-content'>");
-            var icon = $("<h2 class='center light-blue-text'><i class='material-icons'>fitness_center</i></h2>");
-            var title = $("<h5 class='card-title center'>"+ results[i].routineName +"</h5>");
-            for (var j=0; i < results.exercises; i++) {
-                var exercise = $("<h2>" + results.exerciseName)
-            }
-        }
+      });
 
-    }
-
-    $("#editRoutine").on("click", function(event) {
+    // make sure these are classes instead of ids
+    $(".editRoutine").on("click", function(event) {
         event.preventDefault();
 
     });
 
-    $("#deleteRoutine").on("click", function(event) {
+     // make sure these are classes instead of ids
+    $(".deleteRoutine").on("click", function(event) {
         event.preventDefault();
 
     });
