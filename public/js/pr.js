@@ -19,7 +19,7 @@ $(document).ready(function(){
                                 <p>My third exercise is <b>${exercise3}</b> and I am doing <b>${repCount3}</b> reps. </p>
                             </div> 
                             <div class="modal-footer">
-                                <a href="#!" class="modal-close waves-effect waves-green btn--flat">Let's Do It!</a>
+                                <a href="/userRoutines" class="waves-effect waves-green btn--flat">Let's Do It!</a>
                             </div>`
 
         $("#myRoutine").append(myRoutine);

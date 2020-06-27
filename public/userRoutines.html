@@ -49,13 +49,13 @@
 
 
 <div class="container">
-    <div class="section"><div class="container">
+    <div class="section">
+      <div class="container">
         <div class="row center">
           <h3 class="header col s12 light-blue-text no-pad-bot no-margin-bot">User Created Routines</h3>
         </div>
-    </div>
+      </div>
     <div id="userRoutines" class="row">
-      <!-- EXAMPLE USER ROUTINE(TO BE GENERATED IN JAVASCRIPT) -->
         <div class="col s12 m12">
           <table class="striped">
             <thead>
@@ -73,7 +73,7 @@
             </thead>
     
             <tbody id="prTable">
-              <tr>
+              <!-- <tr>
                 <td>1</td>
                 <td>Kobe's</td>
                 <td>1</td>
@@ -85,102 +85,12 @@
                 <td>1</td>
                 <td class="center-align"><button id="editBtn" class="waves-effect waves-light btn">Edit</button>
                 <button id="deleteBtn" class="waves-effect waves-light btn">Delete</button></td>
-              </tr>
+              </tr> -->
              
             </tbody>
-          </table>
-            <!-- <div class="card hoverable">
-                <div class="card-content">
-                  <h2 class="center light-blue-text"><i class="material-icons">fitness_center</i></h2>
-                  <h5 id="RoutineName" class="card-title center">Kobe's Routine</h5>
-                    <div class="row">
-                      <div id="Exercise" class="col s8">
-                        <p>Push-Ups</p>
-                      </div>
-                      <div id="Reps" class="col s4">
-                        <p>20</p>
-                      </div>
-                    </div> 
-                    <div class="row">
-                      <div id="Exercise" class="col s8">
-                        <p>Sit-Ups</p>
-                      </div>
-                      <div id="Reps" class="col s4">
-                        <p>30</p>
-                      </div> -->
-                    <!-- </div> -->
-                    <!-- <div class="row right-align">
-                      <button id="editBtn" class="waves-effect waves-light btn">Edit</button>
-                      <button id="deleteBtn" class="waves-effect waves-light btn">Delete</button>
-                    </div> -->
-                </div>
-            </div>
+          </table>  
         </div>
-      <!-- END EXAMPLE -->
-
-      <!-- EXAMPLE USER ROUTINE(TO BE GENERATED IN JAVASCRIPT) -->
-      <div class="col s12 m4">
-        <div class="card hoverable">
-            <div class="card-content">
-              <h2 class="center light-blue-text"><i class="material-icons">fitness_center</i></h2>
-              <h5 id="RoutineName" class="card-title center">Steve's Routine</h5>
-                <div class="row">
-                  <div id="Exercise" class="col s8">
-                    <p>League of Legends</p>
-                  </div>
-                  <div id="Reps" class="col s4">
-                    <p>20</p>
-                  </div>
-                </div> 
-                <div class="row">
-                  <div id="Exercise" class="col s8">
-                    <p>All Nighting</p>
-                  </div>
-                  <div id="Reps" class="col s4">
-                    <p>30</p>
-                  </div>
-                </div> 
-                <div class="row">
-                  <div id="Exercise" class="col s8">
-                    <p>League of Legends</p>
-                  </div>
-                  <div id="Reps" class="col s4">
-                    <p>20</p>
-                  </div>
-                </div> 
-                <div class="row">
-                  <div id="Exercise" class="col s8">
-                    <p>All Nighting</p>
-                  </div>
-                  <div id="Reps" class="col s4">
-                    <p>30</p>
-                  </div>
-                </div> 
-            </div>
-        </div>
-    </div>
-  <!-- END EXAMPLE -->
-
-  <!-- EXAMPLE USER ROUTINE(TO BE GENERATED IN JAVASCRIPT) -->
-  <div class="col s12 m4">
-    <div class="card hoverable">
-        <div class="card-content">
-          <h2 class="center light-blue-text"><i class="material-icons">fitness_center</i></h2>
-          <h5 id="RoutineName" class="card-title center">Jenny's Routine</h5>
-            <div class="row">
-              <div id="Exercise" class="col s8">
-                <p>Push-Ups</p>
-              </div>
-              <div id="Reps" class="col s4">
-                <p>20</p>
-              </div>
-            </div> 
-        </div>
-    </div>
-</div>
-<!-- END EXAMPLE -->
-
-    </div>
+      </div>
     </div>
 </div>
 
@@ -202,6 +112,65 @@
       </div>
     </div>
   </footer>
+
+  <!-- modals -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <form id="formroutine" class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="routineName" name="routineName" type="text" class="validate">
+                  <label for="routineName">Routine Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="sets" type="text" class="validate">
+                  <label for="sets">How many sets?</label>
+                </div>
+              </div>
+              <!-- exercise 1 -->
+              <div id="exercise1Row" class="row">
+                <div class="input-field col s8">
+                  <input id="exercise1" type="text">
+                  <label for="exercise1">Exercise 1</label>
+                </div>
+                <div class='input-field col s4'>
+                  <input id="repCount1" type="text">
+                  <label for="repCount1">How many reps?</label>
+                </div>
+              </div>
+              <!-- exercise 2 -->
+              <div id="exercise2Row" class="row">
+                <div class="input-field col s8">
+                  <input id="exercise2" type="text">
+                  <label for="exercise2">Exercise 2</label>
+                </div>
+                <div class='input-field col s4'>
+                  <input id="repCount2" type="text">
+                  <label for="repCount2">How many reps?</label>
+                </div>
+              </div>
+              <!-- exercise 3 -->
+              <div id="exercise3Row" class="row">
+                <div class="input-field col s8">
+                  <input id="exercise3" type="text">
+                  <label for="exercise3">Exercise 3</label>
+                </div>
+                <div class='input-field col s4'>
+                  <input id="repCount3" type="text">
+                  <label for="repCount3">How many reps?</label>
+                </div>
+              </div>
+              
+              <div class="row right-align">
+                <a id="saveButton" class="waves-effect waves-light btn-large" href="#" ><i class="material-icons left">create</i>Save</a>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
 
   <!-- Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

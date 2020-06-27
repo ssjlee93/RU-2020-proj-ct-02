@@ -16,24 +16,51 @@ $(document).ready(function(){
             let column = $("<td>").text(values[j]);
             newRow.append(column);
             }
-           let btns = $("<td class='center-align'>").html("<button id='editBtn' class='waves-effect waves-light btn'>Edit</button><button id='deleteBtn' class='waves-effect waves-light btn'>Delete</button>");
-           newRow.append(btns);
+
+            let btns = $("<td class='center-align'>").html("<a href='#editModal' class='editRoutine waves-effect waves-light btn modal-trigger'>Edit</a><button  class='deleteRoutine waves-effect waves-light btn'>Delete</button>");
+            newRow.append(btns);
+
         //   name, sets, exercise1, rep1, exercise2, rep2, exercise3, rep3);
             $("#prTable").append(newRow);
         }
-
       });
 
-    // make sure these are classes instead of ids
-    $(".editRoutine").on("click", function(event) {
+    $("#prTable").on("click","a", function(event) { 
         event.preventDefault();
         let eleme = $(this).parent().data();
+        console.log(eleme);
+        var routineName = $("#routineName").val().trim();
+        var sets = parseInt($("#sets").val());
+        var exercise1 = $("#exercise1").val().trim();
+        var repCount1 = parseInt($("#repCount1").val());
+        var exercise2 = $("#exercise2").val().trim();
+        var repCount2 = parseInt($("#repCount2").val());
+        var exercise3 = $("#exercise3").val().trim();
+        var repCount3 = parseInt($("#repCount3").val());
+        
+        let editRoutine = {
+            routineName: routineName,
+            sets: sets,
+            exerciseOne: exercise1,
+            repOne: repCount1,
+            exerciseTwo: exercise2,
+            repTwo: repCount2,
+            exerciseThree: exercise3,
+            repThree: repCount3
+        }
+
+        $.ajax("/api/pr" + eleme, {
+            type: "PUT",
+            data: editRoutine,
+            dataType: "json",
+            contentType: "application/json",
+        })
     });
 
-     // make sure these are classes instead of ids
     $(".deleteRoutine").on("click", function(event) {
         event.preventDefault();
-        let eleme = $(this).parent().data();
+        // let eleme = $(this).parent().data();
+        console.log("DELETE BUTTON CLICKED");
     });
 
     // update, delete 
