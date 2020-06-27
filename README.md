@@ -90,6 +90,7 @@ In order to avoid problems mentioned above, we made the following changes:
 
 ### Todo
 * user_id, user authentication. Refer the week14hw 
-* Delete button and styling. 
 * dry the code 
 * work on the alternative - use sequelize join to account for customizations and updates 
+
+* all CRUD working. Brush up frontend -> done. 
