@@ -41,9 +41,8 @@ module.exports = function(app) {
         repTwo,
         repThree
       },{
-
         where: {
-          id
+          id: req.params.id
         }
       })
       

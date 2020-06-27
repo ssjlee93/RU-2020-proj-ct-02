@@ -8,6 +8,7 @@ $(document).ready(function(){
        
         for (var i = 0; i < length; i++) {
             let newRow = $("<tr>"); 
+            newRow.data(routines[i].id);
             let id = $("<td>").text(routines[i].id);
             newRow.append(id);
            let name = $("<td>").text(routines[i].routineName);
@@ -37,14 +38,21 @@ $(document).ready(function(){
     // make sure these are classes instead of ids
     $(".editRoutine").on("click", function(event) {
         event.preventDefault();
-
+        let eleme = $(this).parent().data();
     });
 
      // make sure these are classes instead of ids
     $(".deleteRoutine").on("click", function(event) {
         event.preventDefault();
-
+        let eleme = $(this).parent().data();
     });
 
+    // update, delete 
+        // update = recreate post with id of the item 
+        // jqeury data -> dynamically GENERATED 
+        // it's not generated -> READ fro mthe server -> Grabbing ID from the server 
+    // dry code 
+    // ?? join table - continue?
+    // presentation 
 
 });
