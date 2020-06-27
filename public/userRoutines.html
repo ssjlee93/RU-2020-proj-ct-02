@@ -73,7 +73,7 @@
             </thead>
     
             <tbody id="prTable">
-              <tr>
+              <!-- <tr>
                 <td>1</td>
                 <td>Kobe's</td>
                 <td>1</td>
@@ -85,7 +85,7 @@
                 <td>1</td>
                 <td class="center-align"><button id="editBtn" class="waves-effect waves-light btn">Edit</button>
                 <button id="deleteBtn" class="waves-effect waves-light btn">Delete</button></td>
-              </tr>
+              </tr> -->
              
             </tbody>
           </table>  
@@ -112,6 +112,65 @@
       </div>
     </div>
   </footer>
+
+  <!-- modals -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <form id="formroutine" class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="routineName" name="routineName" type="text" class="validate">
+                  <label for="routineName">Routine Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="sets" type="text" class="validate">
+                  <label for="sets">How many sets?</label>
+                </div>
+              </div>
+              <!-- exercise 1 -->
+              <div id="exercise1Row" class="row">
+                <div class="input-field col s8">
+                  <input id="exercise1" type="text">
+                  <label for="exercise1">Exercise 1</label>
+                </div>
+                <div class='input-field col s4'>
+                  <input id="repCount1" type="text">
+                  <label for="repCount1">How many reps?</label>
+                </div>
+              </div>
+              <!-- exercise 2 -->
+              <div id="exercise2Row" class="row">
+                <div class="input-field col s8">
+                  <input id="exercise2" type="text">
+                  <label for="exercise2">Exercise 2</label>
+                </div>
+                <div class='input-field col s4'>
+                  <input id="repCount2" type="text">
+                  <label for="repCount2">How many reps?</label>
+                </div>
+              </div>
+              <!-- exercise 3 -->
+              <div id="exercise3Row" class="row">
+                <div class="input-field col s8">
+                  <input id="exercise3" type="text">
+                  <label for="exercise3">Exercise 3</label>
+                </div>
+                <div class='input-field col s4'>
+                  <input id="repCount3" type="text">
+                  <label for="repCount3">How many reps?</label>
+                </div>
+              </div>
+              
+              <div class="row right-align">
+                <a id="saveButton" class="waves-effect waves-light btn-large" href="#" ><i class="material-icons left">create</i>Save</a>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
 
   <!-- Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
