@@ -25,7 +25,7 @@ module.exports = function(app) {
     });
 
 
-    app.put("/api/pr:id", async function(req, res) {
+    app.put("/api/pr/:id", async function(req, res) {
       // Update takes in an object describing the properties we want to update, and
       // we use where to describe which objects we want to update
       
@@ -45,7 +45,6 @@ module.exports = function(app) {
           id: req.params.id
         }
       })
-      
       res.json(dbPR);
     });
 
