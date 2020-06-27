@@ -16,8 +16,10 @@ $(document).ready(function(){
             let column = $("<td>").text(values[j]);
             newRow.append(column);
             }
+
             let btns = $("<td class='center-align'>").html("<a href='#editModal' class='editRoutine waves-effect waves-light btn modal-trigger'>Edit</a><button  class='deleteRoutine waves-effect waves-light btn'>Delete</button>");
             newRow.append(btns);
+
         //   name, sets, exercise1, rep1, exercise2, rep2, exercise3, rep3);
             $("#prTable").append(newRow);
         }
