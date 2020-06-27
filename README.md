@@ -6,6 +6,8 @@
 ![express.js](https://img.shields.io/static/v1?label=express&message=.js&color=68a063)
 ![Materialize](https://img.shields.io/static/v1?label=Materialize&message=CSS&color=eb7077)
 
+ https://ru-2020-projec-02.herokuapp.com/
+
 ## Table of Contents 
 
 * [Collaborators](#Collaborators)
@@ -75,11 +77,19 @@ Wireframe of our PR Tracker
   2. No customization for reps for each exercise 
   3. No weight specification 
   4. Empty strings will be passed from the client side to the server when no exercise is input for exercises 2~5.
+
   To reflect more practical user experience, we split the above structure into two tables: routines and exercises.
 
   * To reflect the new table structure above, client-side needed to dynamically add forms. When adding aroutine, we added a button to add more exercises instead of having a preset form. 
 
+* In the midst of split table structure, we realized that more elements were dynamicaally generated. To avoid errors and complication, we reverted to the original structure mentioned above. 
+
+In order to avoid problems mentioned above, we made the following changes: 
+1. all fields are required - users will have to input everything so that no empty string exists. 
+2. Added reps for each exercise, but still has set number of exercises and sets 
+
 ### Todo
 * user_id, user authentication. Refer the week14hw 
-* client side completion. 
-* api-routes modification 
+* Delete button and styling. 
+* dry the code 
+* work on the alternative - use sequelize join to account for customizations and updates 

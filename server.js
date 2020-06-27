@@ -32,4 +32,14 @@ db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on http://localhost:" + PORT);
   });
+  return db.PR.create({
+    routineName: "Steve",
+    sets: 3, 
+    exerciseOne: "push ups", 
+    repOne: 10, 
+    exerciseTwo: "inverted push ups",
+    repTwo: 10, 
+    exerciseThree: "squats",
+    repThree: 20
+  });
 });
