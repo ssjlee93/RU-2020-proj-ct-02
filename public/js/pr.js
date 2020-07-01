@@ -31,7 +31,8 @@ $(document).ready(function(){
                                 <p>Your third exercise is <b>${repCount3}</b> <b>${exercise3}</b></p>
                             </div> 
                             <div class="modal-footer">
-                                <a href="/userRoutines" class="waves-effect waves-green btn">Lets view your routine!</a>
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                                <a href="#userRoutines" class="waves-effect waves-green btn">Lets view your routine!</a>
                             </div>` 
         $("#myRoutine").append(myRoutine);           
         }
