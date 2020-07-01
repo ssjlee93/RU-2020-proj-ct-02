@@ -26,13 +26,13 @@
       <ul class="right hide-on-med-and-down">
         <li><a class="waves-effect waves-light btn" href="/">Home</a></li>
         <!--added href, modal trigger-->
-        <li><a class="waves-effect waves-light btn" href="/userRoutines">View Routines</a></li>
+        <li><a class="waves-effect waves-light btn" href="#userRoutines">View Routines</a></li>
 
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
         <li><a href="/">Home Page</a></li>
-        <li><a href="/userRoutines">View Routines</a></li>
+        <li><a href="#userRoutines">View Routines</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -103,61 +103,36 @@
 
   <div class="container">
     <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h4>User Created Routines</h4>
-          <div class="row">
-            <div class="col s12 m6">
-              <div class="card hoverable">
-                  <div class="card-content">
-                      <div class="icon-block">
-                          <h2 class="center light-blue-text"><i class="material-icons">add_circle_outline</i></h2>
-                          <h5 class="card-title center">Create Your Own Routine</h5>
-                          <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit culpa debitis eius neque expedita non aliquam eum doloribus molestiae excepturi praesentium corrupti odio nisi ad, quod nobis corporis delectus voluptas.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col s12 m6">
-            <div class="card hoverable">
-                <div class="card-content">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">add_circle_outline</i></h2>
-                        <h5 class="card-title center">Create Your Own Routine</h5>
-                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit culpa debitis eius neque expedita non aliquam eum doloribus molestiae excepturi praesentium corrupti odio nisi ad, quod nobis corporis delectus voluptas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6">
-          <div class="card hoverable">
-              <div class="card-content">
-                  <div class="icon-block">
-                      <h2 class="center light-blue-text"><i class="material-icons">add_circle_outline</i></h2>
-                      <h5 class="card-title center">Create Your Own Routine</h5>
-                      <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit culpa debitis eius neque expedita non aliquam eum doloribus molestiae excepturi praesentium corrupti odio nisi ad, quod nobis corporis delectus voluptas.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="col s12 m6">
-        <div class="card hoverable">
-            <div class="card-content">
-                <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="material-icons">add_circle_outline</i></h2>
-                    <h5 class="card-title center">Create Your Own Routine</h5>
-                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit culpa debitis eius neque expedita non aliquam eum doloribus molestiae excepturi praesentium corrupti odio nisi ad, quod nobis corporis delectus voluptas.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-          </div>
+      <div class="container">
+        <div class="row center">
+          <h3 class="header col s12 light-blue-text no-pad-bot no-margin-bot">User Created Routines</h3>
         </div>
       </div>
-
+    <div id="userRoutines" class="row">
+        <div class="col s12 m12">
+          <table class="striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                  <th>Routine</th>
+                  <th>Sets</th>
+                  <th>Exercise 1</th>
+                  <th>Reps</th>
+                  <th>Exercise 2</th>
+                  <th>Reps</th>
+                  <th>Exercise 3</th>
+                  <th>Reps</th>
+              </tr>
+            </thead>
+    
+            <tbody id="prTable">
+             
+            </tbody>
+          </table>  
+        </div>
+      </div>
     </div>
-  </div>
+</div>
 
 
   <div class="parallax-container valign-wrapper">
@@ -238,6 +213,65 @@
     </div>
   </div>
 
+
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <form id="editformroutine" class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="editroutineName" name="editroutineName" type="text" class="validate">
+                  <label for="editroutineName">Routine Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="editsets" type="text" class="validate">
+                  <label for="editsets">How many sets?</label>
+                </div>
+              </div>
+              <!-- exercise 1 -->
+              <div id="editexercise1Row" class="row">
+                <div class="input-field col s8">
+                  <input id="editexercise1" type="text">
+                  <label for="editexercise1">Exercise 1</label>
+                </div>
+                <div class='input-field col s4'>
+                  <input id="editrepCount1" type="text">
+                  <label for="editrepCount1">How many reps?</label>
+                </div>
+              </div>
+              <!-- exercise 2 -->
+              <div id="editexercise2Row" class="row">
+                <div class="input-field col s8">
+                  <input id="editexercise2" type="text">
+                  <label for="editexercise2">Exercise 2</label>
+                </div>
+                <div class='input-field col s4'>
+                  <input id="editrepCount2" type="text">
+                  <label for="editrepCount2">How many reps?</label>
+                </div>
+              </div>
+              <!-- exercise 3 -->
+              <div id="editexercise3Row" class="row">
+                <div class="input-field col s8">
+                  <input id="editexercise3" type="text">
+                  <label for="editexercise3">Exercise 3</label>
+                </div>
+                <div class='input-field col s4'>
+                  <input id="editrepCount3" type="text">
+                  <label for="editrepCount3">How many reps?</label>
+                </div>
+              </div>
+              
+              <div class="row right-align">
+                <button type="submit" class="saveRoutine waves-effect waves-light btn-large"><i class="material-icons left">create</i>Save</button>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
+
   <div id="myRoutine" class="modal">
   
   </div>
@@ -248,5 +282,6 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/pr.js"></script>
+  <script src="js/userRoutines.js"></script>
   </body>
 </html>
