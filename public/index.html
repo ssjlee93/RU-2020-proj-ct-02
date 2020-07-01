@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset = "UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>My Workout Buddy</title>
 
     <!-- Google Fonts  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Mono:ital,wght@0,100;0,400;0,700;1,500&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <!-- CSS Links -->
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -24,7 +26,7 @@
       <ul class="right hide-on-med-and-down">
         <li><a class="waves-effect waves-light btn" href="/">Home</a></li>
         <!--added href, modal trigger-->
-        <li><a href="/userRoutines">View Routines</a></li>
+        <li><a class="waves-effect waves-light btn" href="/userRoutines">View Routines</a></li>
 
       </ul>
 
@@ -42,10 +44,10 @@
 
         <h1 class="header center light-blue-text text-darken-1">My Workout Buddy</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Your Personal Record and Routine Tracker</h5>
+          <h5 class="header col s12 light">Your Personal Routine Tracker</h5>
         </div>
         <div class="row center">
-          <a href="#createModal" class="btn-large waves-effect waves-light light-blue lighten-1 modal-trigger">Create your Routine</a>
+          <a href="#createModal" class="btn-large waves-effect waves-light light-blue lighten-1 modal-trigger pulse">Create your Routine</a>
         </div>
 
 
@@ -184,13 +186,13 @@
             <form id="formroutine" class="col s12">
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="routineName" name="routineName" type="text" class="validate">
+                  <input id="routineName" name="routineName" type="text">
                   <label for="routineName">Routine Name</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="sets" type="text" class="validate">
+                  <input id="sets" type="text">
                   <label for="sets">How many sets?</label>
                 </div>
               </div>

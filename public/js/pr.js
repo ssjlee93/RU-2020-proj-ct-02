@@ -3,6 +3,7 @@ $(document).ready(function(){
 
     $("#submitRoutine").on("click", function(event) {
         event.preventDefault();
+        $("#myRoutine").empty();
         var routineName = $("#routineName").val().trim();
         var sets = parseInt($("#sets").val());
         var exercise1 = $("#exercise1").val().trim();
@@ -12,17 +13,28 @@ $(document).ready(function(){
         var exercise3 = $("#exercise3").val().trim();
         var repCount3 = parseInt($("#repCount3").val());
         
-        var myRoutine = ` <div class="modal-content">
-                            <p>My Routine name is <b>${routineName}</b> and I am doing <b>${sets}</b> sets. </p>
-                                <p>My first exercise is <b>${exercise1}</b> and I am doing <b>${repCount1}</b> reps. </p>
-                                <p>My second exercise is <b>${exercise2}</b> and I am doing <b>${repCount2}</b> reps. </p>
-                                <p>My third exercise is <b>${exercise3}</b> and I am doing <b>${repCount3}</b> reps. </p>
+        if (!routineName || !sets  || !exercise1  || !exercise2  || !exercise3  || !repCount1  || !repCount2  || !repCount3 ) {
+        var myRoutine = 
+            `<div class="modal-content center-align">
+                    <h2>Please Fill in all fields</h2>
+                </div> 
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>` 
+        $("#myRoutine").append(myRoutine);
+        } else {
+        var myRoutine = 
+                ` <div class="modal-content center-align">
+                            <p>Your routine name is <b>${routineName}</b> and it has <b>${sets}</b> sets. </p>
+                                <p>Your first exercise is <b>${repCount1}</b> <b>${exercise1}</b></p>
+                                <p>Your second exercise is <b>${repCount2}</b> <b>${exercise2}</b></p>
+                                <p>Your third exercise is <b>${repCount3}</b> <b>${exercise3}</b></p>
                             </div> 
                             <div class="modal-footer">
-                                <a href="/userRoutines" class="waves-effect waves-green btn--flat">Let's Do It!</a>
-                            </div>`
-
-        $("#myRoutine").append(myRoutine);
+                                <a href="/userRoutines" class="waves-effect waves-green btn">Lets view your routine!</a>
+                            </div>` 
+        $("#myRoutine").append(myRoutine);           
+        }
         
         let newRoutine = {
             routineName: routineName,
@@ -39,7 +51,7 @@ $(document).ready(function(){
 
     function submit(data) {
         $.post("/api/pr", data, function() {
-          window.location.href = "/userRoutines";
+        //   window.location.href = "/userRoutines";
         });
       }
     
