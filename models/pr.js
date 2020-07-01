@@ -3,35 +3,35 @@ module.exports = function (sequelize, DataTypes) {
 const PR = sequelize.define("PR", {
     routineName: {
       type: DataTypes.STRING,
-      allowNull: '0'
+      allowNull: false
     },
     sets: {
       type: DataTypes.INTEGER,
-      allowNull: '0'
+      allowNull: false
     },
     exerciseOne: {
       type: DataTypes.STRING,
-      allowNull: '0'
+      allowNull: false
     },
     repOne: {
       type: DataTypes.INTEGER,
-      allowNull: '0'
+      allowNull: false
     },
     exerciseTwo: {
       type: DataTypes.STRING,
-      allowNull: '0'
+      allowNull: false
     },
     repTwo: {
       type: DataTypes.INTEGER,
-      allowNull: '0',
+      allowNull: false,
     },
     exerciseThree: {
       type: DataTypes.STRING,
-      allowNull: '0'
+      allowNull: false
     },    
     repThree: {
       type: DataTypes.INTEGER,
-      allowNull: '0',
+      allowNull: false,
     },
   });
   
