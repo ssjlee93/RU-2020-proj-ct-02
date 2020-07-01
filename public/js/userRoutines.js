@@ -7,7 +7,7 @@ $(document).ready(function(){
         let routines = data.routines; 
         let length = routines.length;
         for (var i = 0; i < length; i++) {
-            let newRow = $("<tr>"); 
+            let newRow = $("<tr class='hoverable'>"); 
             let values = Object.values(routines[i]);
             for (var j = 0; j < 9; j++) {
             let column = $("<td>").text(values[j]);
