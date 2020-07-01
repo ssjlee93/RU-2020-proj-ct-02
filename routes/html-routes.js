@@ -18,7 +18,7 @@ module.exports = function(app) {
   });
 
   app.get("/userRoutines", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/userRoutines.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
   
 };
