@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('.modal').modal();
-
+    
     let eleme;
     let editObj = [];
 
