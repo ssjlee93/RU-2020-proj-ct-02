@@ -34,8 +34,8 @@ $(document).ready(function () {
                                 <p>Your third exercise is <b>${repCount3}</b> <b>${exercise3}</b></p>
                             </div> 
                             <div class="modal-footer">
-                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                                <a href="#userRoutines" class="waves-effect waves-green btn">Lets view your routine!</a>
+                                
+                                <a href="/userRoutines" class="modal-close waves-effect waves-green btn">Lets view your routine!</a>
                             </div>`
             $("#myRoutine").append(myRoutine);
         }
@@ -129,7 +129,7 @@ $(document).ready(function () {
                                       <p>Your third exercise is <b>${repCount3}</b> <b>${exercise3}</b></p>
                                   </div> 
                                   <div class="modal-footer">
-                                      <a href="/" class="waves-effect waves-green btn">Lets view your routine!</a>
+                                      <a href="/userRoutines" class="modal-close waves-effect waves-green btn">Lets view your routine!</a>
                                   </div>`
             $("#myRoutine").append(myRoutine);
         }
@@ -148,7 +148,13 @@ $(document).ready(function () {
             type: "PUT",
             data: editRoutine,
         }).then(function () {
-            location.reload();
+            $('html, body').animate({
+                scrollTop: $("#userRoutines").offset().top
+            }, 500);
+            // location.reload();
+            setTimeout(function () {
+                window.location.reload(1);
+            }, 501); 
         })
     });
 
@@ -164,6 +170,12 @@ $(document).ready(function () {
 
     $("#myRoutine").on("click", "a", function (event) {
         event.preventDefault();
-        location.reload();
+        $('html, body').animate({
+            scrollTop: $("#userRoutines").offset().top
+        }, 500);
+        // location.reload();
+        setTimeout(function () {
+            window.location.reload(1);
+        }, 501); 
     })
 });
