@@ -7,7 +7,7 @@
 ![Materialize](https://img.shields.io/static/v1?label=Materialize&message=CSS&color=eb7077)
 ![JawsDB](https://img.shields.io/static/v1?label=JawsDB&message=MySQL&color=2cb9ff)
 
- https://ru-2020-projec-02.herokuapp.com/
+ https://ru-2020-proj-ct-02.herokuapp.com/
 
 ## Table of Contents 
 
